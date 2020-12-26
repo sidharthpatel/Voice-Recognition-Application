@@ -18,9 +18,9 @@ Description of any challenges encountered while building the application.
 - Initially, I did not set up a threshold for the application to wait for the user input, so it would immediately listen and stop in split seconds.
 - Moreover, the application would execute once and end afterwards, but we want to implement it in such way that it is constantly overhearing and detecting user's commands.
 ### Open-Source Libraries Used
-[pyttsx3](https://pypi.org/project/pyttsx3/) - text-to-speech conversion library in Python.
-[datetime](https://docs.python.org/3/library/datetime.html) - Class for manipulating dates and times.
-[speech_recognition](https://pypi.org/project/SpeechRecognition/) - Library for performing speech recognition, with support for several engines and APIs, online and offline, in our case, Google Speech Recognition engine.
-[tkinter](https://docs.python.org/3/library/tkinter.html) - Python's standard GUI package.
-[wikipedia](https://pypi.org/project/wikipedia/) - Wikipedia is a Python library that makes it easy to access and parse data from Wikipedia.
-[webbrowser](https://docs.python.org/3/library/webbrowser.html) - A python module that provides a high-level interface to allow displaying web-based documents to the users.
+- [pyttsx3](https://pypi.org/project/pyttsx3/) - text-to-speech conversion library in Python.
+- [datetime](https://docs.python.org/3/library/datetime.html) - Class for manipulating dates and times.
+- [speech_recognition](https://pypi.org/project/SpeechRecognition/) - Library for performing speech recognition, with support for several engines and APIs, online and offline, in our case, Google Speech Recognition engine.
+- [tkinter](https://docs.python.org/3/library/tkinter.html) - Python's standard GUI package.
+- [wikipedia](https://pypi.org/project/wikipedia/) - Wikipedia is a Python library that makes it easy to access and parse data from Wikipedia.
+- [webbrowser](https://docs.python.org/3/library/webbrowser.html) - A python module that provides a high-level interface to allow displaying web-based documents to the users.
