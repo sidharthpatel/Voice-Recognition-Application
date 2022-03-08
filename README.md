@@ -1,8 +1,21 @@
 # Voice-Recognition-Application
+
 Voice-Recognition-Application is a human speech recognition application. It recognises human speech and converts it into text.
 This allows the user to then process the text into desired feature implementation.
 
+### Installation
+
+- `pip install SpeechRecognition` : library for dectecting speech recognition. SpeechRecognition library may have `pyaudio` dependency. Follow further steps to install the dependency successfully.
+  - `python -m pip install pipwin`
+  - `python -m pipwin install pyaudio`
+    _The above two commands should install the pyaudio module_
+- `pip install Tkinter` : library that presents a GUI for the speech recognition visually stimulating the experience of the app.
+- `pip install wikipedia`
+- `pip install webbrowser`
+- `pip install datetime`
+
 ### Features
+
 - [x] Start the application by greeting the user depending on the time through the datetime library.
 - [x] Detect speech and convert it into text for further processing commands by allowing the computer to read the reponse back to the user.
   - [x] Detect phrases such as `Search Wikipedia for Bill Gates` resulting in a wikipedia search.
@@ -13,11 +26,16 @@ This allows the user to then process the text into desired feature implementatio
 ### App Walkthrough GIF
 
 ### Notes
+
 Description of any challenges encountered while building the application.
-- Processing of Voice Recognition in Mac and windows interface were two different challenges as Windows provides built-in voice drivers, their cortana, while Mac leans towards privacy neglecting the access to any voice drivers.
+
+- Speech Recognition library has a dependency called PyAudio, but installing this library through the usual `pip install pyaudio` command failed multiple times. An effective alternative is mentioned above in the [installation](#Installation) section.
+- Processing of Voice Recognition in Mac and windows interface were two different challenges as Windows provides built-in voice drivers (Cortana) while Mac leans towards privacy neglecting the access to any voice drivers.
 - Initially, I did not set up a threshold for the application to wait for the user input, so it would immediately listen and stop in split seconds.
 - Moreover, the application would execute once and end afterwards, but we want to implement it in such way that it is constantly overhearing and detecting user's commands.
+
 ### Open-Source Libraries Used
+
 - [pyttsx3](https://pypi.org/project/pyttsx3/) - text-to-speech conversion library in Python.
 - [datetime](https://docs.python.org/3/library/datetime.html) - Class for manipulating dates and times.
 - [speech_recognition](https://pypi.org/project/SpeechRecognition/) - Library for performing speech recognition, with support for several engines and APIs, online and offline, in our case, Google Speech Recognition engine.

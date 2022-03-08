@@ -26,7 +26,7 @@ def wishMe():
     else:
         speak('Good Evening!')
 
-    speak('I am Tony, sir. How may I help you?')
+    speak('My name is Tony, sir. How may I help you?')
 
 def takeCommand():
     recognition = speech_recognition.Recognizer()
@@ -52,7 +52,7 @@ def takeCommand():
             return 'None'
 
         return query
-        
+
 
 if __name__ == "__main__":
     wishMe()
