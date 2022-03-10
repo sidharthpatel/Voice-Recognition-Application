@@ -1,18 +1,38 @@
+'''
+pyttsx3 : Text-to-speech conversion library in Python. (pro) It works offline unlike other libraries.
+'''
 import pyttsx3
+'''
+datetime : Class for manipulating dates and times.
+'''
 import datetime
+'''
+speech_recognition : Library for recognizing speeches with support for several engines and APIs, both, online and offline.
+'''
 import speech_recognition
+'''
+Tkinter : Built-in python interface to the Tcl/Tk GUI toolkit.
+'''
 import tkinter
+'''
+Wikipedia : Python library that makes it easy to access and parse data from Wikipedia.
+'''
 import wikipedia
+'''
+Webbrowser : Python module provides a high-level interface to allow displaying web-based documents to users.
+'''
 import webbrowser
 
-engine = pyttsx3.init()
-voices = engine.getProperty('voices')
-engine.setProperty('voice', voices[0].id)
-rate = engine.getProperty('rate')
-engine.setProperty('rate', rate - 14)
-windows = tkinter.Tk()
-windows.configure(background = 'lightblue')
+# Setup
+engine = pyttsx3.init() # object creation
+voices = engine.getProperty('voices') # getting list of voices
+engine.setProperty('voice', voices[0].id) # setting preferred voice
+rate = engine.getProperty('rate') # getting details of current speaking rate
+engine.setProperty('rate', rate - 14) # setting up new voice rate
+windows = tkinter.Tk() # Generates a new window
+windows.configure(background = 'lightblue') # Configure the window background to lightblue
 
+# Audio function that will say the string in the parameter and wait for user response.
 def speak(audio):
     engine.say(audio)
     engine.runAndWait()
@@ -32,6 +52,7 @@ def takeCommand():
     recognition = speech_recognition.Recognizer()
     with speech_recognition.Microphone() as source:
         w = tkinter.Label(windows, text = 'Listening...', font = ('Courier', 16))
+        w.config(bg='lightblue')
         w.pack()
         windows.update()
         recognition.pause_threshold = 1
@@ -39,14 +60,16 @@ def takeCommand():
 
         try:
             w = tkinter.Label(windows, text = 'Recognizing...', font = ('Courier', 16))
+            w.config(bg='lightblue')
             w.pack()
             windows.update()
             query = recognition.recognize_google(audio, language = 'en-US')
             w = tkinter.Label(windows, text = f'User Said: {query}', font = ('Courier', 16))
+            w.config(bg='lightblue')
             w.pack()
             windows.update()
         except Exception:
-            w = tkinter.Label(windows, text = 'Say that again please...', font = ('Courier', 16))
+            w = tkinter.Label(windows, text = 'Say that again please...', font = ('Courier', 16), background='lightblue')
             w.pack()
             windows.update()
             return 'None'
